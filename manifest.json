@@ -1,0 +1,33 @@
+{
+  "name": "Raised Request",
+  "description": "Raise a request with desktop support",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions":["tabs","<all_urls>","activeTab"],
+  "background": {
+    "scripts": [ "Scripts/background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "options.html"
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+        "suggested_key": {
+            "default": "Ctrl+M",
+            "mac": "MacCtrl+M"
+        },
+        "description": "Opens options.html"
+    }
+  },
+
+  "icons": {
+   "16": "Images/Walmart16.png",
+   "48": "Images/walmart48.png",
+  "128": "Images/Walmart128.jpeg"
+ },
+  "web_accessible_resources": [
+    "style/style.css"
+  ]
+}

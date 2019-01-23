@@ -1,0 +1,72 @@
+body {
+    min-width: 300px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    padding: 10px;
+}
+
+input {
+    outline: none;
+}
+
+.banner{
+    width: 100%;
+    background-color: #fff;
+}
+
+.logo{
+    /* max-width: 300px; */
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.formBody, .response{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.textField{
+    flex-basis: 100%;
+    width: 100%;
+}
+
+#form{
+    flex-basis: 100%;
+}
+
+.title{
+    padding: 0;
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: bold
+}
+
+#optionsSubmit{
+    margin: 5%;
+}
+
+#sendInfo {
+    font-size: 1.7rem;
+}
+
+.response{
+    background-color: #ececec;
+    width: 100%;
+    margin: 3%; 
+}
+
+.status{
+    height: 30px;
+    flex-basis: 100%;
+    /* background-color: #ececec; */
+    font-size: 10px;
+}
+
+#screenshot {
+    display: none
+}

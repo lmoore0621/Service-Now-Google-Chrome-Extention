@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Raised Request</title>
+    <link rel="stylesheet" type="text/css" href="Styling/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="banner">
+      <img class="logo" src="Walmart.svg" alt="walmart logo">
+    </div>
+    <div class="formBody">
+    <h3>RAISED REQUEST</h3>
+      <form id="form">
+        <p class="title">APPLICATION NAME:</p> <input type="text" class="textField" id="applicationName"> <br>
+        <p class="title">ISSUE:</p><textarea id="issueDescription" class="textField" cols="20" rows="5"></textarea>
+      </form>
+      
+      <!--ScreenShot of current page-->
+      <div class="response">
+          <img id="target" src="Images/Walmart128.jpeg" height="200">
+      </div>
+      <div class="status">
+        <p id="sendInfo"></p>
+      </div>
+      <button class="btn btn-primary" type='submit' value='Submit' id='optionsSubmit'>Submit</button>
+    </div>
+    <script src="Scripts/options.js"></script>
+  </body>
+</html>
