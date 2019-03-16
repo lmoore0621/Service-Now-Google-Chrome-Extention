@@ -56,10 +56,10 @@ var base64toBlob = function(base64Data, contentType) {
 	
 	//setting up request headers
 	var fileAttachmentClient = new XMLHttpRequest();
-	fileAttachmentClient.open("post", "https://dev63900.service-now.com/api/now/attachment/file?table_name=" + tableName + "&table_sys_id=" + tableSysId + "&file_name=IncidentScreenShot");
+	fileAttachmentClient.open("post", "https://dev60257.service-now.com/api/now/attachment/file?table_name=" + tableName + "&table_sys_id=" + tableSysId + "&file_name=IncidentScreenShot");
 	fileAttachmentClient.setRequestHeader("Accept", "application/json");
 	fileAttachmentClient.setRequestHeader("Content-Type", "image/jpeg");
-	fileAttachmentClient.setRequestHeader('Authorization', 'Basic ' + btoa('admin' + ':' + 'dfoD8t9CiIUA'));
+	fileAttachmentClient.setRequestHeader('Authorization', 'Basic ' + btoa('admin' + ':' + 'JBtsE20JTobn'));
 
 	fileAttachmentClient.send(binaryData);
 }
@@ -71,9 +71,13 @@ function sendRequester(){
 
 	//request template
 	var tempRequest = {
-		"caller_id": "681ccaf9c0a8016400b98a06818d57c7",
-		"business_service": "27d32778c0a8000b00db970eeaa60f16",
+		"assignment_group": {
+			"link": "https://dev60257.service-now.com/api/now/table/sys_user_group/287ebd7da9fe198100f92cc8d1d2154e",
+			"value": "287ebd7da9fe198100f92cc8d1d2154e"
+		},
 		"short_description": requestDescription,
+		"urgency": '4',
+		"impact": '5'
 	}
 	
 	//return back as string to send to ServiceNow API
@@ -81,12 +85,11 @@ function sendRequester(){
 	
 	var client = new XMLHttpRequest();
 	//opening connection to API at servicenow 
-	client.open("post", "https://dev63900.service-now.com/api/now/table/incident");
+	client.open("POST", "https://dev60257.service-now.com/api/now/table/incident", true, "admin", "JBtsE20JTobn");
 	
 	//request headers settings
-	client.setRequestHeader('Accept','application/json');
-	client.setRequestHeader('Content-Type','application/json');
-	client.setRequestHeader('Authorization', 'Basic ' + btoa('admin' + ':' + 'dfoD8t9CiIUA'));
+	client.setRequestHeader("Accept", "application/json");
+	client.setRequestHeader("Content-Type","application/json");
 		
 	client.onreadystatechange = function() {
 		if(this.readyState == this.DONE) {
